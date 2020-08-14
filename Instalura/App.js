@@ -16,18 +16,27 @@ import {
 } from 'react-native'
 
 const largura = Dimensions.get("screen").width
+const informacoes = [{
+  usuario:"Saulo 1"
+},{
+  usuario:"Saulo 2"
+},{
+  usuario:"Saulo 3"
+}]
 
 const App = () => {
   return (
     <ScrollView>
-      <Text>Saulo</Text>
-      <Image source={require("./res/img/alura.jpg")} 
-      style={estilo.imagem} 
-      />
-      <Text>Saulo</Text>
-      <Image source={require("./res/img/alura.jpg")}
-      style={estilo.imagem} 
-        />
+      {
+        informacoes.map(foto=>
+          <Fragment key={foto.usuario}>
+            <Text>{foto.usuario}</Text>
+            <Image source={require("./res/img/alura.jpg")} 
+            style={estilo.imagem} 
+            />
+          </Fragment>
+        )
+      }
    </ScrollView>
   );
 };
