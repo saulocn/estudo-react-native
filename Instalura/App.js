@@ -6,46 +6,53 @@
  * @flow
  */
 
-import React, {Fragment} from 'react';
+import React, { Fragment } from "react";
 import {
-  Text, 
+  Text,
   Image,
   ScrollView,
   Dimensions,
-  StyleSheet
-} from 'react-native'
+  StyleSheet,
+  FlatList,
+} from "react-native";
 
-const largura = Dimensions.get("screen").width
-const informacoes = [{
-  usuario:"Saulo 1"
-},{
-  usuario:"Saulo 2"
-},{
-  usuario:"Saulo 3"
-}]
+const largura = Dimensions.get("screen").width;
+const informacoes = [
+  {
+    usuario: "Saulo 1",
+  },
+  {
+    usuario: "Saulo 2",
+  },
+  {
+    usuario: "Saulo 3",
+  },
+];
 
 const App = () => {
   return (
     <ScrollView>
-      {
-        informacoes.map(foto=>
-          <Fragment key={foto.usuario}>
-            <Text>{foto.usuario}</Text>
-            <Image source={require("./res/img/alura.jpg")} 
-            style={estilo.imagem} 
+      <FlatList
+        data={informacoes}
+        renderItem={({ item }) => (
+          <Fragment key={item.usuario}>
+            <Text>{item.usuario}</Text>
+            <Image
+              source={require("./res/img/alura.jpg")}
+              style={estilo.imagem}
             />
           </Fragment>
-        )
-      }
-   </ScrollView>
+        )}
+      />
+    </ScrollView>
   );
 };
 
 const estilo = StyleSheet.create({
-  imagem:{
-    width:largura, 
-    height:largura
-  }
-})
+  imagem: {
+    width: largura,
+    height: largura,
+  },
+});
 
 export default App;
