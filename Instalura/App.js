@@ -2,6 +2,7 @@ import React, { Fragment, useState, useEffect } from "react";
 import { ScrollView, FlatList, Text } from "react-native";
 import { Cabecalho } from "./src/Components/Cabecalho";
 import { Foto } from "./src/Components/Foto";
+import { Comentarios } from "./src/Components/Comentarios";
 import lerFotos from "./src/api/feed";
 
 const App = () => {
@@ -23,7 +24,9 @@ const App = () => {
             <Foto 
             urlFoto={item.url}
             descricao={item.description}
+            qtdLikes={item.likes}
              />
+             <Comentarios comentarios={item.comentarios} />
           </Fragment>
         )}
       />

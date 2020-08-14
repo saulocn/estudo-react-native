@@ -11,6 +11,10 @@ const estilo = StyleSheet.create({
     height: 40,
     margin: 5,
   },
+  viewLike: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
 });
 
 export default estilo;

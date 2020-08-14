@@ -20,7 +20,6 @@ INSERT INTO user (
     user_password,
     user_profile_photo_url
 ) 
-
 SELECT 'Alura', '123456', "https://raw.githubusercontent.com/bugan/instalura-api/master/uploads/logo.jpg"
 WHERE NOT EXISTS (SELECT * FROM user WHERE user_name = 'Alura')
 `;
@@ -31,7 +30,6 @@ INSERT INTO user (
     user_password,
     user_profile_photo_url
 ) 
-
 SELECT 'gabrielleitealura', '123456', 'http://USER-PHOTO-URL.com' 
 WHERE NOT EXISTS (SELECT * FROM user WHERE user_name = 'gabrielleitealura')
 `;
@@ -42,7 +40,6 @@ INSERT INTO user (
     user_password,
     user_profile_photo_url
 ) 
-
 SELECT 'pauloscalercioalura', '123456', 'http://USER-PHOTO-URL.com' 
 WHERE NOT EXISTS (SELECT * FROM user WHERE user_name = 'pauloscalercioalura')
 `;
@@ -80,8 +77,7 @@ INSERT INTO photo (
     photo_description,
     user_id
 )
-
-SELECT 1,datetime('2018-02-01 15:10:50'),'https://www.imagemhost.com.br/images/2019/11/27/foto_3.jpg', 'comentario da foto',1 
+SELECT 1,datetime('2018-02-01 15:10:50'),'https://images.dog.ceo/breeds/hound-plott/hhh-23456.jpeg', 'comentario da foto',1 
 WHERE NOT EXISTS (SELECT * FROM photo WHERE photo_id = 1)
 `;
 const INSERT_DEFAULT_PHOTO_2 = `
@@ -92,11 +88,7 @@ INSERT INTO photo (
     photo_description,
     user_id
 )
-
-
-
-
-SELECT 2,datetime('2018-02-13 10:30:25'),'https://www.imagemhost.com.br/images/2019/11/27/65471462_1193154477523428_3282751902607052484_n.jpg','comentario da foto',1
+SELECT 2,datetime('2018-02-13 10:30:25'),'https://images.dog.ceo/breeds/saluki/n02091831_2638.jpg','comentario da foto',1
 WHERE NOT EXISTS (SELECT * FROM photo WHERE photo_id = 2)
 `;
 const INSERT_DEFAULT_PHOTO_3 = `
@@ -107,8 +99,7 @@ INSERT INTO photo (
     photo_description,
     user_id
 )
-
-SELECT 3,datetime('2018-02-23 19:00:15'),'https://www.imagemhost.com.br/images/2019/11/27/47117459_2143415245698396_1579765390659818341_n.jpg','comentario da foto',1
+SELECT 3,datetime('2018-02-23 19:00:15'),'https://images.dog.ceo/breeds/terrier-border/n02093754_6817.jpg','comentario da foto',1
 WHERE NOT EXISTS (SELECT * FROM photo WHERE photo_id = 3)
 `;
 const INSERT_DEFAULT_PHOTO_4 = `
@@ -119,8 +110,7 @@ INSERT INTO photo (
     photo_description,
     user_id
 )
-
-SELECT 4,datetime('2018-03-17 12:15:00'),'https://instagram.fcgh9-1.fna.fbcdn.net/t51.2885-15/e35/15276770_381074615568085_8052939980646907904_n.jpg?ig_cache_key=MTM5ODY4MDMyNjYyMDA1MDE4OQ%3D%3D.2','comentario da foto',2
+SELECT 4,datetime('2018-03-17 12:15:00'),'https://images.dog.ceo/breeds/dalmatian/cooper2.jpg','comentario da foto',2
 WHERE NOT EXISTS (SELECT * FROM photo WHERE photo_id = 4)
 `;
 const INSERT_DEFAULT_PHOTO_5 = `
@@ -131,8 +121,7 @@ INSERT INTO photo (
     photo_description,
     user_id
 )
-
-SELECT 5,datetime('2018-04-10 13:35:20'),'https://instagram.fcgh10-1.fna.fbcdn.net/t51.2885-15/e35/14482111_1635089460122802_8984023070045896704_n.jpg?ig_cache_key=MTM1MzEzNjM4NzAxMjIwODUyMw%3D%3D.2','comentario da foto',3
+SELECT 5,datetime('2018-04-10 13:35:20'),'https://images.dog.ceo/breeds/spaniel-japanese/n02085782_866.jpg','comentario da foto',3
 WHERE NOT EXISTS (SELECT * FROM photo WHERE photo_id = 5)
 `;
 const INSERT_DEFAULT_PHOTO_6 = `
@@ -143,8 +132,7 @@ INSERT INTO photo (
     photo_description,
     user_id
 )
-
-SELECT 6,datetime('2018-05-19 16:45:00'),'https://instagram.fcgh9-1.fna.fbcdn.net/t51.2885-15/e35/15276770_381074615568085_8052939980646907904_n.jpg?ig_cache_key=MTM5ODY4MDMyNjYyMDA1MDE4OQ%3D%3D.2','comentario da foto',3
+SELECT 6,datetime('2018-05-19 16:45:00'),'https://images.dog.ceo/breeds/weimaraner/n02092339_719.jpg','comentario da foto',3
 WHERE NOT EXISTS (SELECT * FROM photo WHERE photo_id = 6)
 `;
 
