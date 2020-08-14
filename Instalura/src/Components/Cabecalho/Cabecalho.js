@@ -2,11 +2,11 @@ import React, { Fragment } from "react";
 import { Text, Image, View } from "react-native";
 import estilo from "./estilo";
 
-const Cabecalho = ({ nomeUsuario }) => {
+const Cabecalho = ({ nomeUsuario, urlImage }) => {
   return (
     <View style={estilo.Cabecalho}>
       <Image
-        source={require("../../../res/img/alura.jpg")}
+        source={{uri: urlImage}}
         style={estilo.fotoUsuario}
       />
       <Text>{nomeUsuario}</Text>
